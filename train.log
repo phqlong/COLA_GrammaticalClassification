@@ -1,0 +1,81 @@
+[2022-12-27 18:34:03,632][__main__][INFO] - Configs tree:
+[2022-12-27 18:34:03,637][__main__][INFO] - model:
+  model_checkpoint: google/bert_uncased_L-2_H-128_A-2
+  num_classes: 2
+  lr: 0.01
+processing:
+  data_dir: data
+  num_workers: 4
+  batch_size: 64
+  max_length: 128
+training:
+  max_epochs: 10
+  log_every_n_steps: 10
+  deterministic: true
+  fast_dev_run: false
+  limit_train_batches: 0.25
+  limit_val_batches: 0.25
+  model_checkpoint_dir: models
+  log_dir: logs
+
+[2022-12-27 18:34:03,639][__main__][INFO] - Using the model: google/bert_uncased_L-2_H-128_A-2
+[2022-12-27 18:34:19,090][datamodule][INFO] - Load & Prepare COLA Dataset from GLUE benchmark
+[2022-12-27 18:34:24,237][datasets.builder][WARNING] - Found cached dataset glue (C:/Users/Admin/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+[2022-12-27 18:34:24,250][datamodule][INFO] - CoLA Dataset:
+[2022-12-27 18:34:24,251][datamodule][INFO] - DatasetDict({
+    train: Dataset({
+        features: ['sentence', 'label', 'idx'],
+        num_rows: 8551
+    })
+    validation: Dataset({
+        features: ['sentence', 'label', 'idx'],
+        num_rows: 1043
+    })
+    test: Dataset({
+        features: ['sentence', 'label', 'idx'],
+        num_rows: 1063
+    })
+})
+[2022-12-27 18:34:29,366][datasets.builder][WARNING] - Found cached dataset glue (C:/Users/Admin/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+[2022-12-27 18:34:29,373][datasets.fingerprint][WARNING] - Parameter 'function'=<function ColaDatamodule.setup.<locals>.tokenize at 0x000001BB08F30700> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+[2022-12-27 18:34:30,364][datamodule][INFO] - Setup datset in stage fit
+[2022-12-27 18:39:15,655][__main__][INFO] - Configs tree:
+[2022-12-27 18:39:15,660][__main__][INFO] - model:
+  model_checkpoint: google/bert_uncased_L-2_H-128_A-2
+  num_classes: 2
+  lr: 0.01
+processing:
+  data_dir: data
+  num_workers: 4
+  batch_size: 64
+  max_length: 128
+training:
+  max_epochs: 20
+  log_every_n_steps: 10
+  deterministic: true
+  fast_dev_run: false
+  limit_train_batches: 0.25
+  limit_val_batches: 0.25
+  model_checkpoint_dir: models
+  log_dir: logs
+
+[2022-12-27 18:39:15,662][__main__][INFO] - Using the model: google/bert_uncased_L-2_H-128_A-2
+[2022-12-27 18:39:28,828][datamodule][INFO] - Load & Prepare COLA Dataset from GLUE benchmark
+[2022-12-27 18:39:34,645][datasets.builder][WARNING] - Found cached dataset glue (C:/Users/Admin/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+[2022-12-27 18:39:34,656][datamodule][INFO] - CoLA Dataset:
+[2022-12-27 18:39:34,659][datamodule][INFO] - DatasetDict({
+    train: Dataset({
+        features: ['sentence', 'label', 'idx'],
+        num_rows: 8551
+    })
+    validation: Dataset({
+        features: ['sentence', 'label', 'idx'],
+        num_rows: 1043
+    })
+    test: Dataset({
+        features: ['sentence', 'label', 'idx'],
+        num_rows: 1063
+    })
+})
+[2022-12-27 18:39:39,801][datasets.builder][WARNING] - Found cached dataset glue (C:/Users/Admin/.cache/huggingface/datasets/glue/cola/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+[2022-12-27 18:39:40,717][datamodule][INFO] - Setup datset in stage fit

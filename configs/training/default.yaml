@@ -1,0 +1,8 @@
+max_epochs: 10
+log_every_n_steps: 10
+deterministic: true
+fast_dev_run: false
+limit_train_batches: 0.25
+limit_val_batches: ${training.limit_train_batches}
+model_checkpoint_dir: "models"
+log_dir: "logs"

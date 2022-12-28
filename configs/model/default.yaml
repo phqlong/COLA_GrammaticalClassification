@@ -1,0 +1,3 @@
+model_checkpoint: google/bert_uncased_L-2_H-128_A-2   # model used for training the classifier & tokenizer used for processing the data
+num_classes: 2
+lr : 0.01
